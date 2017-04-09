@@ -63,8 +63,10 @@ def main():
     tag_with_distance(servers, MY_LATITUDE, MY_LONGITUDE)
     sort_by_distance_and_load(servers)
 
-    for server in servers:
-        print_server(server)
+    #for server in servers:
+    #    print_server(server)
+
+    print short_name(servers[0])
 
 if __name__ == "__main__":
     sys.exit(main())
