@@ -66,7 +66,12 @@ def main():
     #for server in servers:
     #    print_server(server)
 
-    print short_name(servers[0])
+    if len(sys.argv) > 1:
+        servers = servers[:int(sys.argv[1])]
+    else:
+        servers = servers[:1]
+
+    print " ".join(short_name(server) for server in servers)
 
 if __name__ == "__main__":
     sys.exit(main())
